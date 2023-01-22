@@ -7,18 +7,19 @@ export const ContactList = () =>{
         return ContacsCollection.find({}).fetch();
     });
     
+    console.log(contacts)
    
     
 
     return (
         <>
-      <h3>Contact List</h3>
-      <ul>
-        {contacts.map((contact) => (
-          <li key={contact.email}>{contact.name} - {contact.email}</li>
-        ))}
-      </ul>
-    </>
+            <h3>Contact List</h3>
+        <ul>
+          {contacts.map((contact) => (
+            <li key={contact.email}>{contact.name} - {contact.email}</li>
+          ))}
+        </ul>
+        </>
         
     )
 }
